@@ -30,6 +30,7 @@ Start Training:
 ```
 ./DQN.py --env breakout.bin
 # use `--algo` to select other DQN algorithms. See `-h` for more options.
+# use '--ntrain' to train the same game in parallel. Output folder change into train_log/DQN-Breakout-ntrain
 ```
 
 Watch the agent play:
