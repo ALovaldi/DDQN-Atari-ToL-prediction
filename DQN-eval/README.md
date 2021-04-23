@@ -30,6 +30,8 @@ Start Training:
 ```
 ./DQN.py --env breakout.bin
 # use `--algo` to select other DQN algorithms. See `-h` for more options.
+# use '--ntrain' to train the same game in parallel. 
+The result will be saved in train_log/DQN-breakout-ntrain
 ```
 
 Watch the agent play:
@@ -37,11 +39,6 @@ Watch the agent play:
 # Download pretrained models or use one you trained:
 wget http://models.tensorpack.com/DeepQNetwork/DoubleDQN-breakout.bin.npz
 ./DQN.py --env breakout.bin --task play --load DoubleDQN-breakout.bin.npz
-```
-
-Evaluation of 50 episodes:
-```
-./DQN.py --env breakout.bin --task eval --load DoubleDQN-breakout.bin.npz
 ```
 
 ### With gym's Atari:
