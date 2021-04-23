@@ -26,18 +26,10 @@ Download an [atari rom](https://github.com/openai/atari-py/tree/gdb/atari_py/ata
 wget https://github.com/openai/atari-py/raw/gdb/atari_py/atari_roms/breakout.bin
 ```
 
-Start Training:
+Evaluation of 50 episodes:
 ```
-./DQN.py --env breakout.bin
-# use `--algo` to select other DQN algorithms. See `-h` for more options.
-# use '--ntrain' to train the same game in parallel. The result will be saved in train_log/DQN-breakout-ntrain
-```
-
-Watch the agent play:
-```
-# Download pretrained models or use one you trained:
-wget http://models.tensorpack.com/DeepQNetwork/DoubleDQN-breakout.bin.npz
-./DQN.py --env breakout.bin --task play --load DoubleDQN-breakout.bin.npz
+./DQN.py --env breakout.bin --task eval --load DoubleDQN-breakout.bin.npz 
+#use'--ntrain' to add "-ntrain" to target folder path
 ```
 
 ### With gym's Atari:
